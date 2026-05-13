@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard · Stock.tech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <nav class="sidebar" id="sidebar">
+    <div class="logo">
+      <i class="fa-solid fa-box-archive"></i>
+      <h2 class="logo-text">Stock<span>.tech</span></h2>
+    </div>
+
+    <div class="menu-container">
+      <div class="categoria">
+        <p class="titulo-categoria">Visão Geral</p>
+        <ul>
+          <li><a href="index.html" class="active"><i class="fa-solid fa-chart-line"></i> <span>Dashboard</span></a></li>
+          <li><a href="financeiro.html"><i class="fa-solid fa-money-bill-wave"></i> <span>Financeiro</span></a></li>
+        </ul>
+      </div>
+      <div class="categoria">
+        <p class="titulo-categoria">Estoque</p>
+        <ul>
+          <li><a href="movimentacoes.html"><i class="fa-solid fa-truck-ramp-box"></i> <span>Movimentações</span></a></li>
+          <li><a href="produtos.html"><i class="fa-solid fa-box-open"></i> <span>Produtos</span></a></li>
+        </ul>
+      </div>
+      <div class="categoria">
+        <p class="titulo-categoria">Comercial</p>
+        <ul>
+          <li><a href="pedidos.html"><i class="fa-solid fa-cart-shopping"></i> <span>Pedido de Vendas</span></a></li>
+          <li><a href="contatos.html"><i class="fa-solid fa-address-book"></i> <span>Contatos</span></a></li>
+        </ul>
+      </div>
+      <div class="categoria">
+        <p class="titulo-categoria">Ajuda</p>
+        <ul>
+          <li><a href="faq.html"><i class="fa-solid fa-circle-question"></i> <span>FAQ</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="login.html" class="btn-sair">
+        <i class="fa-solid fa-right-from-bracket"></i> <span>Desconectar</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="main-wrapper" id="main-wrapper">
+    
+    <header class="topbar">
+      <div class="topbar-left">
+        <h2 class="topbar-title">Dashboard</h2>
+      </div>
+      
+      <div class="topbar-right">
+        <div class="nav-item">
+          <button class="icon-btn" id="btn-config"><i class="fa-solid fa-gear"></i></button>
+        </div>
+
+        <div class="nav-item has-dropdown user-chip-wrap">
+          <div class="user-chip">
+            <div class="chip-avatar" id="nav-avatar">AD</div>
+            <span class="chip-name" id="nav-name">Admin</span>
+          </div>
+          <div class="dropdown-menu profile-menu">
+            <div class="profile-header">
+              <strong id="drop-name">Administrador Geral</strong>
+              <small id="drop-email">admin@stocktech.com</small>
+            </div>
+            <div class="profile-body">
+              <p id="drop-cargo">Gerente de Operações</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="modal-overlay" id="modal-config">
+      <div class="modal-box modal-lg">
+        <div class="modal-head">
+          <h3>Configurações</h3>
+          <button class="modal-close" onclick="document.getElementById('modal-config').classList.remove('open')"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <div class="config-layout">
+          <div class="config-nav">
+            <button class="config-tab active" data-tab="tab-perfil">Meu Perfil</button>
+            <button class="config-tab" data-tab="tab-aparencia">Aparência</button>
+          </div>
+          
+          <div class="config-content">
+            <div id="tab-perfil" class="config-pane active">
+              <h4>Informações Pessoais</h4>
+              <p class="text-muted mb-15">Atualize seus dados de contato.</p>
+              
+              <div class="form-group">
+                <label class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="cfg-nome" value="Administrador Geral">
+              </div>
+              <div class="form-group">
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="cfg-email" value="admin@stocktech.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Cargo</label>
+                <input type="text" class="form-control" id="cfg-cargo" value="Gerente de Operações">
+              </div>
+            </div>
+
+            <div id="tab-aparencia" class="config-pane" style="display: none;">
+              <h4>Aparência do Sistema</h4>
+              <p class="text-muted mb-15">Personalize o tema da plataforma.</p>
+              
+              <div class="form-group">
+                <label class="form-label">Tema da Interface</label>
+                <select class="form-control" id="cfg-tema">
+                  <option value="light">Claro (Padrão)</option>
+                  <option value="dark">Escuro (Dark Mode)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-foot">
+          <button class="btn-ghost" onclick="document.getElementById('modal-config').classList.remove('open')">Cancelar</button>
+          <button class="btn-primary" id="btn-salvar-config">Salvar Mudanças</button>
+        </div>
+      </div>
+    </div>
+
+
+    <main class="page-content">
+      <div class="page-header">
+        <div>
+          <h1>Visão Geral do Sistema</h1>
+          <p>Última atualização: <span id="hora-atualizacao">Agora mesmo</span></p>
+        </div>
+        <div class="header-actions">
+          <select class="form-control" id="filtro-dias" style="width: auto; cursor: pointer;">
+            <option value="7">Últimos 7 dias</option>
+            <option value="15">Últimos 15 dias</option>
+            <option value="30">Últimos 30 dias</option>
+            <option value="60">Últimos 60 dias</option>
+            <option value="90">Últimos 90 dias</option>
+          </select>
+
+          <button class="btn-ghost" id="btn-atualizar" title="Recarregar Dados">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+          
+          <button class="btn-primary btn-nova" id="btn-nova-nota">
+             Nova Nota <i class="fa-solid fa-plus" style="margin-left: 5px;"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon icon-blue"><i class="fa-solid fa-box"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">Produtos Ativos <span class="kpi-dias-label">(7D)</span></div>
+            <div class="kpi-value" id="kpi-produtos">...</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon icon-purple"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">Valor em Estoque <span class="kpi-dias-label">(7D)</span></div>
+            <div class="kpi-value" id="kpi-estoque">...</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon icon-green"><i class="fa-solid fa-cart-arrow-down"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">Vendas <span class="kpi-dias-label">(7D)</span></div>
+            <div class="kpi-value" id="kpi-vendas">...</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon icon-amber"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">Lucro <span class="kpi-dias-label">(7D)</span></div>
+            <div class="kpi-value" id="kpi-lucro">...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="card-painel chart-container">
+          <div class="card-header">
+            <h3>Movimentações de Estoque</h3>
+          </div>
+          <div class="card-body">
+            <canvas id="graficoMovimentacoes"></canvas>
+          </div>
+        </div>
+        <div class="card-painel">
+          <div class="card-header">
+            <h3>Top Produtos</h3>
+          </div>
+          <div class="card-body">
+            <ul class="top-products-list" id="lista-top-produtos"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="notes-section mt-30">
+        <div class="notes-header">
+          <h3>Notas e Lembretes Operacionais</h3>
+          <div class="toolbar mt-10">
+            <div class="search-wrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" class="toolbar-search" id="input-busca" placeholder="Buscar notas..." autocomplete="off" />
+            </div>
+            <select class="toolbar-filter" id="filter-urgencia" style="cursor: pointer;">
+              <option value="">Urgência (Todas)</option>
+              <option value="Alta">Alta</option>
+              <option value="Media">Média</option>
+              <option value="Baixa">Baixa</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Título da Nota</th>
+                <th>Categoria</th>
+                <th>Urgência</th>
+                <th>Status</th>
+                <th>Data</th>
+                <th style="text-align:center">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="notas-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="modal-nota">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 id="modal-titulo-txt">Nova Nota</h3>
+        <button class="modal-close" id="btn-fechar-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="form-nota">
+          <input type="hidden" id="nota-id" />
+          <div class="form-group">
+            <label class="form-label">Título</label>
+            <input type="text" class="form-control" id="f-titulo" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Categoria</label>
+              <select class="form-control" id="f-categoria" required>
+                <option value="">Selecione...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Status</label>
+              <select class="form-control" id="f-status">
+                <option value="Pendente">Pendente</option>
+                <option value="Em andamento">Em andamento</option>
+                <option value="Concluída">Concluída</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nível de Urgência</label>
+            <div class="urgency-buttons">
+              <button type="button" class="btn-urgency" data-val="Alta">Alta</button>
+              <button type="button" class="btn-urgency" data-val="Media">Média</button>
+              <button type="button" class="btn-urgency active" data-val="Baixa">Baixa</button>
+            </div>
+            <input type="hidden" id="f-urgencia" value="Baixa">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Descrição</label>
+            <textarea class="form-control" id="f-descricao" required></textarea>
+          </div>
+          <div class="modal-foot">
+            <button type="button" class="btn-ghost" id="btn-cancelar">Cancelar</button>
+            <button type="submit" class="btn-primary" id="btn-salvar">Salvar Nota</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+{
+    "categorias": [
+        {
+            "id": "1",
+            "nome": "Logística & Estoque"
+        },
+        {
+            "id": "2",
+            "nome": "Financeiro"
+        },
+        {
+            "id": "3",
+            "nome": "Comercial & Vendas"
+        },
+        {
+            "id": "4",
+            "nome": "TI & Sistemas"
+        }
+    ],
+    "produtos": [
+        {
+            "id": "1",
+            "nome": "Notebook Dell Inspiron",
+            "preco": 3500,
+            "quantidade": 15,
+            "vendasNoMes": 45
+        },
+        {
+            "id": "2",
+            "nome": "Monitor LG 24''",
+            "preco": 850,
+            "quantidade": 30,
+            "vendasNoMes": 38
+        },
+        {
+            "id": "3",
+            "nome": "Mouse Sem Fio Logitech",
+            "preco": 120,
+            "quantidade": 80,
+            "vendasNoMes": 32
+        },
+        {
+            "id": "4",
+            "nome": "Teclado Mecânico RGB",
+            "preco": 350,
+            "quantidade": 25,
+            "vendasNoMes": 28
+        }
+    ],
+    "vendas": [
+        {
+            "id": "1",
+            "data": "2026-05-10",
+            "valorTotal": 3500,
+            "lucro": 800
+        },
+        {
+            "id": "2",
+            "data": "2026-05-11",
+            "valorTotal": 1700,
+            "lucro": 450
+        },
+        {
+            "id": "3",
+            "data": "2026-05-12",
+            "valorTotal": 850,
+            "lucro": 200
+        }
+    ],
+    "movimentacoesGrafico": [
+        {
+            "data": "13/02",
+            "qtd": 110,
+            "id": "OwtZQdW98ZM"
+        },
+        {
+            "data": "14/02",
+            "qtd": 125,
+            "id": "M8S54kttxzY"
+        },
+        {
+            "data": "15/02",
+            "qtd": 105,
+            "id": "KQ9PhaDm6CQ"
+        },
+        {
+            "data": "16/02",
+            "qtd": 130,
+            "id": "V9wt5vx4RgY"
+        },
+        {
+            "data": "17/02",
+            "qtd": 140,
+            "id": "oaE4ZIywUsM"
+        },
+        {
+            "data": "18/02",
+            "qtd": 115,
+            "id": "-X_4Fj-1PxA"
+        },
+        {
+            "data": "19/02",
+            "qtd": 150,
+            "id": "pmpxciqETYo"
+        },
+        {
+            "data": "20/02",
+            "qtd": 160,
+            "id": "Jsz9qB_6bek"
+        },
+        {
+            "data": "21/02",
+            "qtd": 135,
+            "id": "7d1USttAHi8"
+        },
+        {
+            "data": "22/02",
+            "qtd": 145,
+            "id": "m8PM6Btx5WU"
+        },
+        {
+            "data": "23/02",
+            "qtd": 120,
+            "id": "9GH7aPJ_wZQ"
+        },
+        {
+            "data": "24/02",
+            "qtd": 170,
+            "id": "4sMNmknYHAw"
+        },
+        {
+            "data": "25/02",
+            "qtd": 180,
+            "id": "dT9mb5wqfrs"
+        },
+        {
+            "data": "26/02",
+            "qtd": 155,
+            "id": "YKr-sVuIBMM"
+        },
+        {
+            "data": "27/02",
+            "qtd": 165,
+            "id": "SEUP2NLdXd4"
+        },
+        {
+            "data": "28/02",
+            "qtd": 140,
+            "id": "hMo1QmxB-SA"
+        },
+        {
+            "data": "01/03",
+            "qtd": 190,
+            "id": "KW_7FifLBmg"
+        },
+        {
+            "data": "02/03",
+            "qtd": 200,
+            "id": "rHIhMIXx_Yc"
+        },
+        {
+            "data": "03/03",
+            "qtd": 175,
+            "id": "D8L4tf8eVLU"
+        },
+        {
+            "data": "04/03",
+            "qtd": 185,
+            "id": "SvjhhdIhIjQ"
+        },
+        {
+            "data": "05/03",
+            "qtd": 160,
+            "id": "UkuWGM774fc"
+        },
+        {
+            "data": "06/03",
+            "qtd": 210,
+            "id": "ylEYLwf882Y"
+        },
+        {
+            "data": "07/03",
+            "qtd": 220,
+            "id": "RXy97ciwbMc"
+        },
+        {
+            "data": "08/03",
+            "qtd": 195,
+            "id": "ryd5kbhcnV8"
+        },
+        {
+            "data": "09/03",
+            "qtd": 205,
+            "id": "xxNmdRBLGXg"
+        },
+        {
+            "data": "10/03",
+            "qtd": 180,
+            "id": "pCORYoJN4is"
+        },
+        {
+            "data": "11/03",
+            "qtd": 230,
+            "id": "c8nwuKB7IOg"
+        },
+        {
+            "data": "12/03",
+            "qtd": 240,
+            "id": "bn2j538MhTM"
+        },
+        {
+            "data": "13/03",
+            "qtd": 215,
+            "id": "JcIJtHtR3bc"
+        },
+        {
+            "data": "14/03",
+            "qtd": 225,
+            "id": "S52lRhSEaHo"
+        },
+        {
+            "data": "15/03",
+            "qtd": 200,
+            "id": "ZP8i_-b_Rlk"
+        },
+        {
+            "data": "16/03",
+            "qtd": 250,
+            "id": "E3iBfHmYTSc"
+        },
+        {
+            "data": "17/03",
+            "qtd": 260,
+            "id": "_aTbO_RQfO4"
+        },
+        {
+            "data": "18/03",
+            "qtd": 235,
+            "id": "aqCpAVCT2zM"
+        },
+        {
+            "data": "19/03",
+            "qtd": 245,
+            "id": "SC-p5onBkZU"
+        },
+        {
+            "data": "20/03",
+            "qtd": 220,
+            "id": "J2mK2KevC6E"
+        },
+        {
+            "data": "21/03",
+            "qtd": 270,
+            "id": "ZUuUidcms14"
+        },
+        {
+            "data": "22/03",
+            "qtd": 280,
+            "id": "Q-GQlGUUpPg"
+        },
+        {
+            "data": "23/03",
+            "qtd": 255,
+            "id": "LESPZo53kHQ"
+        },
+        {
+            "data": "24/03",
+            "qtd": 265,
+            "id": "0bFDegcYv2o"
+        },
+        {
+            "data": "25/03",
+            "qtd": 240,
+            "id": "qSoPYPvBHf4"
+        },
+        {
+            "data": "26/03",
+            "qtd": 290,
+            "id": "fRUcAAG5ch4"
+        },
+        {
+            "data": "27/03",
+            "qtd": 300,
+            "id": "eJxQPPRa9P0"
+        },
+        {
+            "data": "28/03",
+            "qtd": 275,
+            "id": "uUCUPdt6mkk"
+        },
+        {
+            "data": "29/03",
+            "qtd": 285,
+            "id": "qfkEI_cumK4"
+        },
+        {
+            "data": "30/03",
+            "qtd": 260,
+            "id": "LJnL2uKXdMw"
+        },
+        {
+            "data": "31/03",
+            "qtd": 310,
+            "id": "6M36hlICN8A"
+        },
+        {
+            "data": "01/04",
+            "qtd": 320,
+            "id": "oXxPnxarHko"
+        },
+        {
+            "data": "02/04",
+            "qtd": 295,
+            "id": "kNmL5L0an38"
+        },
+        {
+            "data": "03/04",
+            "qtd": 305,
+            "id": "hHriVHgWPtw"
+        },
+        {
+            "data": "04/04",
+            "qtd": 280,
+            "id": "lt98ZCYPpP4"
+        },
+        {
+            "data": "05/04",
+            "qtd": 330,
+            "id": "zt-7w1Lv7eU"
+        },
+        {
+            "data": "06/04",
+            "qtd": 340,
+            "id": "vETzm3AeMII"
+        },
+        {
+            "data": "07/04",
+            "qtd": 315,
+            "id": "Vpsm8AYIFYk"
+        },
+        {
+            "data": "08/04",
+            "qtd": 325,
+            "id": "8FjEQtV15GQ"
+        },
+        {
+            "data": "09/04",
+            "qtd": 300,
+            "id": "14O6TUtpw_8"
+        },
+        {
+            "data": "10/04",
+            "qtd": 350,
+            "id": "Vu66vHPrloo"
+        },
+        {
+            "data": "11/04",
+            "qtd": 360,
+            "id": "sS5uNPuRlDA"
+        },
+        {
+            "data": "12/04",
+            "qtd": 335,
+            "id": "HtLzX9pe5sE"
+        },
+        {
+            "data": "13/04",
+            "qtd": 345,
+            "id": "qoZn9GKdwe4"
+        },
+        {
+            "data": "14/04",
+            "qtd": 320,
+            "id": "5Bs_IzQRrQs"
+        },
+        {
+            "data": "15/04",
+            "qtd": 370,
+            "id": "AgxpZbWMi4A"
+        },
+        {
+            "data": "16/04",
+            "qtd": 380,
+            "id": "XzLAPuYJbLg"
+        },
+        {
+            "data": "17/04",
+            "qtd": 355,
+            "id": "17TdWohMRbo"
+        },
+        {
+            "data": "18/04",
+            "qtd": 365,
+            "id": "hKGSY5lc4mw"
+        },
+        {
+            "data": "19/04",
+            "qtd": 340,
+            "id": "-U5HOlGW938"
+        },
+        {
+            "data": "20/04",
+            "qtd": 390,
+            "id": "XF0_ilPdjGo"
+        },
+        {
+            "data": "21/04",
+            "qtd": 400,
+            "id": "n-ykxj-9Kps"
+        },
+        {
+            "data": "22/04",
+            "qtd": 375,
+            "id": "-SDFTXlOcIM"
+        },
+        {
+            "data": "23/04",
+            "qtd": 385,
+            "id": "UXAyL_ED5ZA"
+        },
+        {
+            "data": "24/04",
+            "qtd": 360,
+            "id": "C7fzuUEa1PU"
+        },
+        {
+            "data": "25/04",
+            "qtd": 410,
+            "id": "W_Jhcx_L6tg"
+        },
+        {
+            "data": "26/04",
+            "qtd": 420,
+            "id": "g7kzK1gUt3E"
+        },
+        {
+            "data": "27/04",
+            "qtd": 395,
+            "id": "VBuWlxHCf3E"
+        },
+        {
+            "data": "28/04",
+            "qtd": 405,
+            "id": "tTpsVI5O94c"
+        },
+        {
+            "data": "29/04",
+            "qtd": 380,
+            "id": "0PHXIMEYtTQ"
+        },
+        {
+            "data": "30/04",
+            "qtd": 430,
+            "id": "IOmHvYXZgxk"
+        },
+        {
+            "data": "01/05",
+            "qtd": 120,
+            "id": "X0YE_tsT8wY"
+        },
+        {
+            "data": "02/05",
+            "qtd": 145,
+            "id": "To3cDVSC6jI"
+        },
+        {
+            "data": "03/05",
+            "qtd": 90,
+            "id": "NdSPAQlHmdg"
+        },
+        {
+            "data": "04/05",
+            "qtd": 210,
+            "id": "UKGHVg_2VG4"
+        },
+        {
+            "data": "05/05",
+            "qtd": 180,
+            "id": "IFX5KQcmUME"
+        },
+        {
+            "data": "06/05",
+            "qtd": 250,
+            "id": "aObSlRDyA9o"
+        },
+        {
+            "data": "07/05",
+            "qtd": 300,
+            "id": "2GMcmSNmK60"
+        },
+        {
+            "data": "08/05",
+            "qtd": 150,
+            "id": "lnSlsPEleBk"
+        },
+        {
+            "data": "09/05",
+            "qtd": 170,
+            "id": "6nOCuTbJgG8"
+        },
+        {
+            "data": "10/05",
+            "qtd": 220,
+            "id": "r686TUKlxqc"
+        },
+        {
+            "data": "11/05",
+            "qtd": 190,
+            "id": "sIuEJio4-3Y"
+        },
+        {
+            "data": "12/05",
+            "qtd": 280,
+            "id": "6buKD1znQrk"
+        }
+    ],
+    "notas": [
+        {
+            "titulo": "23",
+            "categoria": "Financeiro",
+            "status": "Em andamento",
+            "urgencia": "Baixa",
+            "descricao": "123",
+            "criadoEm": "2026-05-13T01:53:07.416Z",
+            "id": "VxgnVFQsK0k"
+        }
+    ],
+    "$schema": "./node_modules/json-server/schema.json"
+}
