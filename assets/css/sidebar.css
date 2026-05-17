@@ -1,0 +1,158 @@
+/* MENU LATERAL */
+.sidebar {
+    width: 70px;
+    height: 100vh;
+    background-color: var(--green-main);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 250px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--green-hover);
+    height: 80px;
+}
+
+.logo i {
+    font-size: 24px;
+    min-width: 30px;
+    text-align: center;
+    color: var(--green-light);
+}
+
+.logo-text {
+    margin-left: 8px;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.sidebar:hover .logo-text {
+    opacity: 1;
+}
+
+.logo span {
+    color: var(--green-light);
+}
+
+.menu-container {
+    flex-grow: 1;
+    padding: 20px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Esconde a barra de rolagem do menu lateral */
+.menu-container::-webkit-scrollbar {
+    display: none;
+}
+
+.titulo-categoria {
+    padding: 0 25px;
+    font-size: 11px;
+    color: #a5d6a7;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+    opacity: 0;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.sidebar:hover .titulo-categoria {
+    opacity: 1;
+}
+
+.categoria ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.categoria ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 23px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.categoria ul li a i {
+    min-width: 24px;
+    font-size: 18px;
+    margin-right: 8px;
+    color: var(--green-light);
+    text-align: center;
+}
+
+.categoria ul li a span {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sidebar:hover .categoria ul li a span {
+    opacity: 1;
+}
+
+.categoria ul li a:hover,
+.categoria ul li a.active {
+    background-color: var(--green-hover);
+    border-left: 4px solid var(--green-light);
+    padding-left: 19px;
+}
+
+.sidebar-footer {
+    padding: 10px 0;
+    border-top: 1px solid var(--green-hover);
+}
+
+.btn-sair {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 0;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-sair i {
+    min-width: 24px;
+    font-size: 18px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.btn-sair span {
+    display: none;
+    opacity: 0;
+}
+
+.sidebar:hover .btn-sair span {
+    display: inline;
+    opacity: 1;
+}
+
+.btn-sair:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffcdd2;
+}

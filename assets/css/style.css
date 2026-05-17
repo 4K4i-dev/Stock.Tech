@@ -1,0 +1,58 @@
+/* ==========================================
+   1. IMPORTAÇÕES EXTERNAS E DE MÓDULOS
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import url('darkmode.css');
+@import url('layout.css');
+@import url('sidebar.css');
+@import url('components.css');
+@import url('dashboard.css');
+
+/* ==========================================
+   2. CONFIGURAÇÕES BASE E VARIÁVEIS GLOBAIS
+   ========================================== */
+:root {
+    --green-main: #1b5e20;
+    --green-hover: #2e7d32;
+    --green-light: #81c784;
+
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+
+    --r-md: 8px;
+    --r-lg: 14px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    display: flex;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ==========================================
+   3. CLASSES UTILITÁRIAS GLOBAIS
+   ========================================== */
+.text-muted {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
